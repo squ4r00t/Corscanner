@@ -63,4 +63,12 @@ if __name__ == "__main__":
             print(f"{RED}[-] The file '{args.file}' does not exist.{RESET}")
             exit(1)
         else:
-            print(f"501 - Not implemented, coming soon...")
+            with open(args.file, "r") as url_list:
+                for line in url_list.readlines():
+                    if ',' in line.strip():
+                        url = line.strip().split(',')[0]
+                        valid_origin = line.strip().split(',')[1]
+                    else:
+                        url = line.strip()
+                        valid_origin = ""
+                    test_url(url, valid_origin)
