@@ -52,11 +52,6 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
 
-    if args.file:
-        if not os.path.isfile(args.file):
-            print(f"{RED}[-] The file '{args.file}' does not exist.{RESET}")
-            exit(1)
-
     if args.url:
         print(f"{MAGENTA}[!] Better be a valid url, didn't check for it...{RESET}")
         if args.valid_origin:
@@ -64,4 +59,8 @@ if __name__ == "__main__":
         else:
             test_url(args.url, "")
     elif args.file:
-        print(f"501 - Not implemented, coming soon...")
+        if not os.path.isfile(args.file):
+            print(f"{RED}[-] The file '{args.file}' does not exist.{RESET}")
+            exit(1)
+        else:
+            print(f"501 - Not implemented, coming soon...")

@@ -1,9 +1,8 @@
-## Corscanner
-___
+# Corscanner
+
 This tool helps you identify CORS misconfiguration in a website.
 
 ### Installation
-___
 
 ```bash
 git clone https://github.com/squ4r00t/Corscanner.git
@@ -12,7 +11,7 @@ python3 main.py -h
 ```
 
 ### Usage
-___
+
 
 **Basic Usage**
 ```bash
